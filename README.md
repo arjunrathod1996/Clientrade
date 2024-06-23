@@ -20,3 +20,43 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 - Merchant Admin 1 creates items/products for different food categories (e.g., appetizers, main courses, desserts).
 - Merchant Admin 1 assigns Merchant Staff 1 to handle orders and operations in one location (e.g., Bansankari) and Merchant Staff 2 for another location (e.g., BTM).
 - Each Merchant Staff member manages orders and ensures smooth operations within their assigned location.
+
+# JWTAuthFilter Class:
+- This class extends OncePerRequestFilter, which ensures that the filter is only applied once per request.
+- It intercepts incoming requests and performs JWT authentication.
+- It extracts the JWT token from the request and validates it.
+- If the token is valid, it sets the authentication in the SecurityContextHolder.
+- If the token is not valid, it logs a warning.
+- It also has a method to check if the given username is an email or phone number.
+- The extractTokenFromRequest method extracts the JWT token from the request cookies.
+
+# SecurityConfig Class:
+- This class is annotated with @Configuration and @EnableWebSecurity, indicating that it defines security configurations for the web application.
+- It configures authentication and authorization settings.
+- It defines beans for various security-related components such as PasswordEncoder, DaoAuthenticationProvider, AuthenticationManager, etc.
+- It configures HTTP security rules using HttpSecurity.
+- It sets up CORS, CSRF protection, and session management.
+- It configures URL-based access control using .authorizeRequests().
+- It defines exception handling for authentication and access denied cases.
+- It adds JWTAuthFilter before UsernamePasswordAuthenticationFilter in the filter chain.
+- It defines success and failure handlers for OAuth2 authentication.
+
+# OAuthenticationSuccessHandler Class:
+- This class handles successful OAuth2 authentication.
+- It retrieves user information from the OAuth2 principal and determines the provider.
+- It extracts user details such as email, first name, last name from the OAuth2 principal.
+- It saves the customer if not already existing and creates a new user.
+- It generates a JWT token for the authenticated user and sets it in the response cookie.
+- It redirects the user to the access page after successful authentication.
+
+# UsersVerification Class:
+- This class represents the entity for storing user verification information.
+- It defines enums for status and content type.
+- It has fields for user, content, verification code, and status.
+- It sets creation time and update time before persisting.
+
+# Controller Methods:
+- These methods handle HTTP POST requests for generating and verifying OTP.
+- The authenticateAndGetGeneratedOtp method generates a random 4-digit OTP, retrieves the user by mobile number, and saves the OTP in the database.
+- The generateOTP method generates a random OTP.
+- The verifyOtp method verifies the OTP entered by the user, sets the status of verification to CLOSED, generates a JWT token for the user, and sets it in the response cookie. Finally, it redirects the user to the access page.
