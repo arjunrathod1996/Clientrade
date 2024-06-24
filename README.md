@@ -132,7 +132,9 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 - Displays the number of successfully referred contacts to the user. For example, if 4 contacts are selected, but only 2 of them are new and successfully referred, the system indicates that 2 contacts were successfully referred.
 ### Displayed Customer List in Table With Respect Merchant Staff
 ![MerchantStaff123](https://github.com/arjunrathod1996/Clientrade/assets/110610821/4baa5ff1-3f33-420c-b3dc-4e314d248b17)
-
+### Dynamic Laguage Translation
+![langugage](https://github.com/arjunrathod1996/Clientrade/assets/110610821/91d18bc1-42ee-46b4-8085-8400e6d71f6b)
+- Implemented dynamic language support, allowing translations into Kannada and Hindi. Similar functionality can be extended to support other languages as well, ensuring accessibility for diverse user bases.
 
 
 
