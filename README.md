@@ -84,5 +84,7 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 ### Merchant Admin Logged In Table
 ![MerchantStaff](https://github.com/arjunrathod1996/Clientrade/assets/110610821/dff5a0df-cc61-4477-a873-92538580c082)
 
-### Merchant Admin Can Assign Items/Producs For Merchant Staff with respect to categoty
+### Merchant Admin Can Assign Items/Producs For Merchant Staff with respect to categoty and different Location.
+![AddAndEditItemProducts](https://github.com/arjunrathod1996/Clientrade/assets/110610821/a58b9931-e3b6-4496-a12b-0e463dbddc0d)
+
 
