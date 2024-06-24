@@ -72,4 +72,6 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 ### Dashboard [Same Dashboard All Roles but Here We can show Counts , Graph Example : Customer daily count, Lead Count, Transaction Count etc with respect to role wise...]
 ![Dashboard](https://github.com/arjunrathod1996/Clientrade/assets/110610821/d0bcef8b-25d4-4e25-9e5a-7799afe9c67e)
 
+### Create and Edit Form
+![Untitled](https://github.com/arjunrathod1996/Clientrade/assets/110610821/ba69c32b-b9a2-4659-a34f-5f0fca6d178c)
 
