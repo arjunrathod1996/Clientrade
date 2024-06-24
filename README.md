@@ -117,7 +117,19 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 - After completing a purchase, the customer can give a review for the purchased item and update it later if needed.
 ### Update Profile
 ![update profile](https://github.com/arjunrathod1996/Clientrade/assets/110610821/a5e3ddea-16bb-4f5d-a803-6de3bffcd042)
-
+### Refer Contact
+![Refer1](https://github.com/arjunrathod1996/Clientrade/assets/110610821/ff96e323-3a2d-41ae-b338-c00ed8794db8)
+![refer2](https://github.com/arjunrathod1996/Clientrade/assets/110610821/22697315-be32-4ede-a524-b26621a549f6)
+- Implemented "Refer" feature in the contact manager support section.
+- Users can select up to 10 contacts, similar to WhatsApp.
+- Users have the flexibility to pick contacts and deselect any they choose not to refer.
+- The system automatically filters out invalid and duplicate phone numbers.
+- Only valid and distinct phone numbers are sent.
+- Selected contacts are displayed using tagsinput.
+- In the database, contacts are stored relative to the associated merchant store and the user ID of the merchant staff.
+- Existing customer contacts are skipped to avoid duplication.
+- The system restricts the number of successfully referred contacts to a maximum of 10.
+- Displays the number of successfully referred contacts to the user. For example, if 4 contacts are selected, but only 2 of them are new and successfully referred, the system indicates that 2 contacts were successfully referred.
 
 
 
