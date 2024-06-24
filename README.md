@@ -58,5 +58,10 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 # Controller Methods:
 - These methods handle HTTP POST requests for generating and verifying OTP.
 - The authenticateAndGetGeneratedOtp method generates a random 4-digit OTP, retrieves the user by mobile number, and saves the OTP in the database.
-- The generateOTP method generates a random OTP.
-- The verifyOtp method verifies the OTP entered by the user, sets the status of verification to CLOSED, generates a JWT token for the user, and sets it in the response cookie. Finally, it redirects the user to the access page.
+- The generateOTP method generates a random OTP and Automatically Taken OTP field.
+- The verifyOtp method verifies the OTP entered by the user, generates a JWT token for the user, and sets it in the response cookie. Finally, it redirects the user to the access page.
+  
+## Screenshots
+
+### Home
+
