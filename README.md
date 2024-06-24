@@ -75,7 +75,9 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 ### Create and Edit Form [Similary For other Forms we can do like this]
 ![Untitled](https://github.com/arjunrathod1996/Clientrade/assets/110610821/ba69c32b-b9a2-4659-a34f-5f0fca6d178c)
 
-### Create and Edit Form [Merchant Admin and Merchant Staff Table]
+### Merchant Admin and Merchant Staff Table
 ![Merchant andt Merchant Staff Table](https://github.com/arjunrathod1996/Clientrade/assets/110610821/25d17627-aadf-46f9-8917-115cccedb22e)
 
+### Merchant Admin Logged In Table
+![MerchantStaff](https://github.com/arjunrathod1996/Clientrade/assets/110610821/dff5a0df-cc61-4477-a873-92538580c082)
 
