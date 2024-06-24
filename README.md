@@ -204,6 +204,25 @@ In the FAQ section of the membership app, we display the most frequently asked q
 - Leads are categorized based on their respective industry or type.
 - A priority level is assigned to each lead (low, medium, high).
 - A boolean field is available to mark the lead as very important if necessary.
+## Lead Contact
+![LeadContact](https://github.com/arjunrathod1996/Clientrade/assets/110610821/4d00cccd-ffae-4c16-8354-097e80e12b59)
+- Each lead can have multiple contacts associated with it, created under the LeadContact table.
+- Contacts can have different designations within the lead organization.
+- Additional details such as social media links, email addresses, and phone numbers are recorded for each contact.
+## Lead Activity
+![Lead Activity](https://github.com/arjunrathod1996/Clientrade/assets/110610821/dece12c7-e327-4f66-8e29-968bf8650ad2)
+- Activities related to each lead and its contacts are recorded in the LeadActivity table.
+- Activities can include different types of interactions such as calls, emails, or meetings.
+- The status of each activity must be recorded, indicating whether the contact responded (open) or the activity is completed or canceled.
+- Follow-up dates are recorded for continued engagement until the lead contact person reaches a conclusion.
+- If the contact person is ready to proceed with the product (CRM), the status is marked as complete. If the contact is not interested, the status is marked as canceled or not interested.
+- Merchant admins can assign lead activities to merchant staff.
+  for Example :
+  ![AssighLeadsFromMerchantAdmin](https://github.com/arjunrathod1996/Clientrade/assets/110610821/e33493d6-c04c-414d-9357-a53f5a8297e9)
+  ![Assigned Leads](https://github.com/arjunrathod1996/Clientrade/assets/110610821/9171b78b-e753-42f6-9323-508b3fc36d8e)
+
+
+
 
 
 
