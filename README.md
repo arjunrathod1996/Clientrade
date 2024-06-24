@@ -222,10 +222,18 @@ In the FAQ section of the membership app, we display the most frequently asked q
   ![Assigned Leads](https://github.com/arjunrathod1996/Clientrade/assets/110610821/9171b78b-e753-42f6-9323-508b3fc36d8e)
 
 # Enable and Disable Key Feature
+## Disable Feature :
 ![AdminPermission](https://github.com/arjunrathod1996/Clientrade/assets/110610821/3318d61e-caa4-4f1c-8fd7-28e6c6bf2269)
 ![enableActivity](https://github.com/arjunrathod1996/Clientrade/assets/110610821/48b4cade-8676-4f70-b5f8-0c810816dedc)
-
-
+- Here Admin Give enable Key Feature for [IN Membership App]
+  1. Appointment
+  2. Submit Bill
+## Enable Feature :
+![After unchecked](https://github.com/arjunrathod1996/Clientrade/assets/110610821/5ed47a4e-cb43-4687-91e1-fda551a9acd3)
+![Afteruumembership](https://github.com/arjunrathod1996/Clientrade/assets/110610821/b4f0f7dc-49e6-468a-a5b5-d0543a9ea30d)
+- Here Admin Give disable Key Feature for [IN Membership App]
+  1. Appointment 
+  2. Submit Bill
 
 
 
