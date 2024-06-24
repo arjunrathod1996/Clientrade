@@ -153,8 +153,21 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 ![insight3](https://github.com/arjunrathod1996/Clientrade/assets/110610821/847d6829-932b-482e-baf7-27592a61d426)
 - Clicking on a specific status count redirects the admin to the bill summary page, where they can track details with respect to individual customers.
 ### For Example :
-- ![Insight4](https://github.com/arjunrathod1996/Clientrade/assets/110610821/9ee7eadd-58cb-45d6-9cce-01e0272577f5)
-- ![Insight5](https://github.com/arjunrathod1996/Clientrade/assets/110610821/e412ab68-2ee9-4291-835f-f51b227ea980)
+![Insight4](https://github.com/arjunrathod1996/Clientrade/assets/110610821/9ee7eadd-58cb-45d6-9cce-01e0272577f5)
+![Insight5](https://github.com/arjunrathod1996/Clientrade/assets/110610821/e412ab68-2ee9-4291-835f-f51b227ea980)
+### Export Data in Excel Sheet and Download Invoice
+![Insight6](https://github.com/arjunrathod1996/Clientrade/assets/110610821/9f271d54-f530-447e-ac71-bdc710c7bcab)
+![Insight7](https://github.com/arjunrathod1996/Clientrade/assets/110610821/5af64ef2-7a58-4bd0-91ca-61e7e44567f4)
+![Insight8](https://github.com/arjunrathod1996/Clientrade/assets/110610821/d493b8d9-79e0-4020-8315-355f5cda4da4)
+- All data can be exported to an Excel sheet.
+- To export all customer data, the admin needs to select the check box before exporting.
+- To export filtered data, checking the check box is not required.
+- The merchant can download invoices in PDF format.
+- To download a customer invoice, the check box must be checked beforehand.
+- The merchant admin can provide the relevant customer with the downloaded invoice.
+
+
+
 
 
 
