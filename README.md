@@ -152,6 +152,10 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 - Date-wise search functionality is supported for detailed tracking and analysis.
 ![insight3](https://github.com/arjunrathod1996/Clientrade/assets/110610821/847d6829-932b-482e-baf7-27592a61d426)
 - Clicking on a specific status count redirects the admin to the bill summary page, where they can track details with respect to individual customers.
+### For Example :
+- ![Insight4](https://github.com/arjunrathod1996/Clientrade/assets/110610821/9ee7eadd-58cb-45d6-9cce-01e0272577f5)
+- ![Insight5](https://github.com/arjunrathod1996/Clientrade/assets/110610821/e412ab68-2ee9-4291-835f-f51b227ea980)
+
 
 
 
