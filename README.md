@@ -109,6 +109,9 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 ### Invoice or Purchase Item
 ![Invoice](https://github.com/arjunrathod1996/Clientrade/assets/110610821/38b5b9f0-3a28-4d45-9915-8e4a96a81f4d)
 - When ordering, if we decide not to include a specific item or food, we can cancel it, and the updated total quantity of items will be displayed. The price will be recalculated based on the quantity, and the grand total amount will be updated accordingly.
+### Purchase History
+![purchase History](https://github.com/arjunrathod1996/Clientrade/assets/110610821/32512c7b-9e0d-499d-9468-d47b9b63b017)
+- After completing a purchase, the cart page will be cleared. All items ordered by the customer can be tracked in the purchase history.
 
 
 
