@@ -101,7 +101,12 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 - After clicking on the respective merchant admin, we can view the merchant staff stores located in relation to the merchant admin and their category.
 
 ### Merchant Stores and Item With Respect Category and Location
-- ![MerchantStoreWithItems](https://github.com/arjunrathod1996/Clientrade/assets/110610821/ca65ec12-853a-4082-aa92-2df1cc78892b)
+![MerchantStoreWithItems](https://github.com/arjunrathod1996/Clientrade/assets/110610821/ca65ec12-853a-4082-aa92-2df1cc78892b)
+- In the merchant store, we can view food items categorized by type and see the average reviews from other customers, allowing us to make informed food orders.
+### Cart Item
+![Added Cart Items](https://github.com/arjunrathod1996/Clientrade/assets/110610821/835f0f7c-b071-46dd-94d1-b1c23f824f02)
+- Food items can be added to the cart and ordered whenever desired.
+
 
 
 
