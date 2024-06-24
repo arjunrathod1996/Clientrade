@@ -137,9 +137,21 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 - Implemented dynamic language support, allowing translations into Kannada and Hindi. Similar functionality can be extended to support other languages as well, ensuring accessibility for diverse user bases.
 
 # Insight (Dashboard)
-- ![Insight1](https://github.com/arjunrathod1996/Clientrade/assets/110610821/3ced7863-2939-44d6-9e8b-547e930117e4)
-- ![Insight2](https://github.com/arjunrathod1996/Clientrade/assets/110610821/c8a436e6-34b5-4aee-999a-c53b0879cea1)
-- ![insight3](https://github.com/arjunrathod1996/Clientrade/assets/110610821/847d6829-932b-482e-baf7-27592a61d426)
+![Insight1](https://github.com/arjunrathod1996/Clientrade/assets/110610821/3ced7863-2939-44d6-9e8b-547e930117e4)
+![Insight2](https://github.com/arjunrathod1996/Clientrade/assets/110610821/c8a436e6-34b5-4aee-999a-c53b0879cea1)
+- The merchant admin can track the total number of customers under their management.
+- Customers can be categorized based on purchased items or products.
+- The system displays:
+  1. Completed status counts and amounts for completed purchases.
+  2. Pending status counts and amounts for pending purchases.
+  3. Rejected status counts and amounts for rejected purchases.
+- A 6-month bar graph visualizes the completed status counts and amounts.
+- The system identifies top customers based on:
+  1. The highest number of purchased items.
+  2. Total spending.
+- Date-wise search functionality is supported for detailed tracking and analysis.
+![insight3](https://github.com/arjunrathod1996/Clientrade/assets/110610821/847d6829-932b-482e-baf7-27592a61d426)
+- Clicking on a specific status count redirects the admin to the bill summary page, where they can track details with respect to individual customers.
 
 
 
