@@ -165,6 +165,8 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 - The merchant can download invoices in PDF format.
 - To download a customer invoice, the check box must be checked beforehand.
 - The merchant admin can provide the relevant customer with the downloaded invoice.
+### Exported Data and Invoice
+
 
 
 
