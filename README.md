@@ -106,6 +106,9 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 ### Cart Item
 ![Added Cart Items](https://github.com/arjunrathod1996/Clientrade/assets/110610821/835f0f7c-b071-46dd-94d1-b1c23f824f02)
 - Food items can be added to the cart and ordered whenever desired.
+### Invoice or Purchase Item
+![Invoice](https://github.com/arjunrathod1996/Clientrade/assets/110610821/38b5b9f0-3a28-4d45-9915-8e4a96a81f4d)
+- When ordering, if we decide not to include a specific item or food, we can cancel it, and the updated total quantity of items will be displayed. The price will be recalculated based on the quantity, and the grand total amount will be updated accordingly.
 
 
 
