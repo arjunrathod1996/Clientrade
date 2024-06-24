@@ -89,10 +89,10 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 
 ## After Adding or Assign All Items and Products, Now In Membership App
 ### Here Customer Can log in With Using Phone Number and then they can stored CUSTOMER_ROLE in database
-![CustomerProfile](https://github.com/arjunrathod1996/Clientrade/assets/110610821/8255c5d1-f47b-4b4a-8611-3664891f0321)
+![CustomerLoggInWithOTP](https://github.com/arjunrathod1996/Clientrade/assets/110610821/a4924e4f-3246-4dd1-9258-6aeeb8bcc2f5)
 
 ### Customer Interface After Logged In
-![Customer dashboard](https://github.com/arjunrathod1996/Clientrade/assets/110610821/df64a6a7-4e76-49ed-a4e5-3e8ba6b38b67)
+![CustomerProfile](https://github.com/arjunrathod1996/Clientrade/assets/110610821/8255c5d1-f47b-4b4a-8611-3664891f0321)
 - Here, I used the Geo Code API to fetch merchant stores based on the location of the merchant staff.
 - First, we need to update the customer's first name and last name, and ensure their profile score is more than 50%. Only then can we fetch merchant stores.
   
