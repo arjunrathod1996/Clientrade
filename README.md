@@ -131,7 +131,8 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 - The system restricts the number of successfully referred contacts to a maximum of 10.
 - Displays the number of successfully referred contacts to the user. For example, if 4 contacts are selected, but only 2 of them are new and successfully referred, the system indicates that 2 contacts were successfully referred.
 ### Show Customer List in Table With Respect Merchant Staff
-![MerchantStaff](https://github.com/arjunrathod1996/Clientrade/assets/110610821/0e7f61a2-8fa2-4e89-8b91-ddf5349fd98d)
+![MerchantStaff123](https://github.com/arjunrathod1996/Clientrade/assets/110610821/4baa5ff1-3f33-420c-b3dc-4e314d248b17)
+
 
 
 
