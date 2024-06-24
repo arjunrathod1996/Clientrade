@@ -136,6 +136,11 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 ![langugage](https://github.com/arjunrathod1996/Clientrade/assets/110610821/91d18bc1-42ee-46b4-8085-8400e6d71f6b)
 - Implemented dynamic language support, allowing translations into Kannada and Hindi. Similar functionality can be extended to support other languages as well, ensuring accessibility for diverse user bases.
 
+# Insight (Dashboard)
+- ![Insight1](https://github.com/arjunrathod1996/Clientrade/assets/110610821/3ced7863-2939-44d6-9e8b-547e930117e4)
+- ![Insight2](https://github.com/arjunrathod1996/Clientrade/assets/110610821/c8a436e6-34b5-4aee-999a-c53b0879cea1)
+- ![insight3](https://github.com/arjunrathod1996/Clientrade/assets/110610821/847d6829-932b-482e-baf7-27592a61d426)
+
 
 
 
