@@ -166,6 +166,8 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 - To download a customer invoice, the check box must be checked beforehand.
 - The merchant admin can provide the relevant customer with the downloaded invoice.
 ### Exported Data and Invoice
+![d1](https://github.com/arjunrathod1996/Clientrade/assets/110610821/5b431fc0-ab5c-46d8-958a-d31fcbf646a9)
+![i1](https://github.com/arjunrathod1996/Clientrade/assets/110610821/41074c2a-d7b9-4feb-aaff-66446897aedd)
 
 # FAQ Section Enhancement Description
 
