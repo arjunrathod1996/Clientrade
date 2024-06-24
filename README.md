@@ -231,6 +231,16 @@ In the FAQ section of the membership app, we display the most frequently asked q
 ![Afteruumembership](https://github.com/arjunrathod1996/Clientrade/assets/110610821/b4f0f7dc-49e6-468a-a5b5-d0543a9ea30d)
 - The admin can disable key features for the Membership App, such as Appointment and Submit Bill.
 
+# Security :
+- If the credentials are entered incorrectly, redirect back to the login page.
+- We can log in directly using Google and GitHub accounts in the membership app.
+  
+- When a user manually enters a URL like "http://localhost:8080/loginwewew" and encounters an error, the message displayed is: "This page isn’t working. If the problem continues, contact the site owner. HTTP ERROR 401."
+![Error404](https://github.com/arjunrathod1996/Clientrade/assets/110610821/8a8eac66-db62-4886-881d-1198d2c5e56a)
+
+- If a user is logged in and attempts to access a URL that doesn't exist, a custom error message should be displayed.
+![Eror4041](https://github.com/arjunrathod1996/Clientrade/assets/110610821/ee49b104-d9a6-4646-8531-f1c203c4033e)
+
 
 
 
