@@ -195,6 +195,16 @@ In the FAQ section of the membership app, we display the most frequently asked q
 ### Search Functionality:
   1. Users can search for specific topics or questions using a search field. This makes it easy to find relevant information quickly without browsing through all the topics.
 
+# Lead
+## Lead Main
+![leadMain1](https://github.com/arjunrathod1996/Clientrade/assets/110610821/92652ce2-815a-435a-a5e6-9d4c1991c628)
+![leadMainTable](https://github.com/arjunrathod1996/Clientrade/assets/110610821/e0ae149f-5bda-46ae-80fd-42e943cee310)
+- Leads are created in the LeadMain table. Examples of leads include "Kaanti Sweets" and "Biba Cloths" in Bengaluru.
+- Each lead entry requires specifying the source of the lead (e.g., store visit, enquiry, campaign, and others).
+- Leads are categorized based on their respective industry or type.
+- A priority level is assigned to each lead (low, medium, high).
+- A boolean field is available to mark the lead as very important if necessary.
+
 
 
 
