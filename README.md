@@ -89,5 +89,10 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 
 ## After Adding or Assign All Items and Products, Now In Membership App
 ### Here Customer Can log in With Using Phone Number and then they can stored CUSTOMER_ROLE in database
+![CustomerLoggInWithOTP](https://github.com/arjunrathod1996/Clientrade/assets/110610821/6e32dea2-fa77-416e-99b4-525f4677c6e3)
+
+### Customer Interface After Logged In
+![Customer dashboard](https://github.com/arjunrathod1996/Clientrade/assets/110610821/df64a6a7-4e76-49ed-a4e5-3e8ba6b38b67)
+
 
 
