@@ -64,4 +64,12 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 ## Screenshots
 
 ### Home
+![AboutContactUsServices](https://github.com/arjunrathod1996/Clientrade/assets/110610821/8b94fb05-6773-4564-955e-961263690046)
+
+### Admin Login Page
+![AdminLogin](https://github.com/arjunrathod1996/Clientrade/assets/110610821/2afb152d-89f0-4b8d-bbd2-736dadd5a38d)
+
+### Dashboard [Same Dashboard All Roles but Here We can show Counts , Graph Example : Customer daily count, Lead Count, Transaction Count etc with respect to role wise...]
+![Dashboard](https://github.com/arjunrathod1996/Clientrade/assets/110610821/d0bcef8b-25d4-4e25-9e5a-7799afe9c67e)
+
 
