@@ -93,6 +93,8 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 
 ### Customer Interface After Logged In
 ![Customer dashboard](https://github.com/arjunrathod1996/Clientrade/assets/110610821/df64a6a7-4e76-49ed-a4e5-3e8ba6b38b67)
-
+- Here, I used the Geo Code API to fetch merchant stores based on the location of the merchant staff.
+- First, we need to update the customer's first name and last name, and ensure their profile score is more than 50%. Only then can we fetch merchant stores.
+  
 
 
