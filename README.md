@@ -221,6 +221,10 @@ In the FAQ section of the membership app, we display the most frequently asked q
   ![AssighLeadsFromMerchantAdmin](https://github.com/arjunrathod1996/Clientrade/assets/110610821/e33493d6-c04c-414d-9357-a53f5a8297e9)
   ![Assigned Leads](https://github.com/arjunrathod1996/Clientrade/assets/110610821/9171b78b-e753-42f6-9323-508b3fc36d8e)
 
+# Enable and Disable Key Feature
+![AdminPermission](https://github.com/arjunrathod1996/Clientrade/assets/110610821/3318d61e-caa4-4f1c-8fd7-28e6c6bf2269)
+![enableActivity](https://github.com/arjunrathod1996/Clientrade/assets/110610821/48b4cade-8676-4f70-b5f8-0c810816dedc)
+
 
 
 
