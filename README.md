@@ -112,6 +112,9 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 ### Purchase History
 ![purchase History](https://github.com/arjunrathod1996/Clientrade/assets/110610821/32512c7b-9e0d-499d-9468-d47b9b63b017)
 - After completing a purchase, the cart page will be cleared. All items ordered by the customer can be tracked in the purchase history.
+### Review
+![Review](https://github.com/arjunrathod1996/Clientrade/assets/110610821/f69ea1c1-1f10-4ae0-9845-7784d01ad7db)
+- After completing a purchase, the customer can give a review for the purchased item and update it later if needed.
 
 
 
