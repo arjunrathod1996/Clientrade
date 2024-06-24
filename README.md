@@ -96,5 +96,7 @@ RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Custome
 - Here, I used the Geo Code API to fetch merchant stores based on the location of the merchant staff.
 - First, we need to update the customer's first name and last name, and ensure their profile score is more than 50%. Only then can we fetch merchant stores.
   
+### Merchant Stores and Activity
+- ![CustomerMerchanMainAdminandActivity](https://github.com/arjunrathod1996/Clientrade/assets/110610821/aa244df9-baa4-406a-bb41-b267a88daf5c)
 
 
