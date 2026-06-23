@@ -1,4 +1,4 @@
-<img width="1363" height="676" alt="After login leads2" src="https://github.com/user-attachments/assets/12683bf7-86a5-4d57-8c06-dc378139e4f7" /><div align="center">
+<div align="center">
 
 # 🚀 Clientrade — Full Stack CRM & Trade Platform
 
