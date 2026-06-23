@@ -1,4 +1,4 @@
-<div align="center">
+<img width="1363" height="676" alt="After login leads2" src="https://github.com/user-attachments/assets/12683bf7-86a5-4d57-8c06-dc378139e4f7" /><div align="center">
 
 # 🚀 Clientrade — Full Stack CRM & Trade Platform
 
@@ -110,31 +110,31 @@ The system prompt is engineered to **reject** any non-CRM question and redirect 
 ### Screenshots
 
 #### Before Login — AI Robo Assistant (General)
-> ![Before Login AI] <img width="1347" height="679" alt="Before login" src="https://github.com/user-attachments/assets/91b57917-48f4-4db5-bdb5-947e7f2316ab" />
+> <img width="1347" height="679" alt="Before login" src="https://github.com/user-attachments/assets/91b57917-48f4-4db5-bdb5-947e7f2316ab" />
 > *Homepage general AI Robo — answers broad questions, available to all visitors*
 
 #### After Login — CRM AI Assistant Activated
-> ![After Login CRM AI] <img width="1360" height="672" alt="After login leads" src="https://github.com/user-attachments/assets/e50347bc-bf87-4451-b565-16671fcca526" />
+> <img width="1360" height="672" alt="After login leads" src="https://github.com/user-attachments/assets/e50347bc-bf87-4451-b565-16671fcca526" />
 > *Post-login CRM AI greets user, lists its scope: Leads, Contacts, Activities, Follow-ups, Sales insights*
 
 #### Out-of-Scope Query Rejection
-> ![Out of Scope](out%20scope%20domain.JPG)
+> <img width="1361" height="680" alt="out scope domain" src="https://github.com/user-attachments/assets/46ca0005-8fed-47c2-857e-365c2b99ace1" />
 > *Asking "What is Java?" → AI correctly rejects and redirects to CRM topics only*
 
 #### Lead Intelligence — Count & Names
-> ![Leads AI](After%20login%20leads2.JPG)
+> <img width="1363" height="676" alt="After login leads2" src="https://github.com/user-attachments/assets/ad4a1965-7598-421c-96d6-76793441c44b" />
 > *"Total leads?" → 2. "Give me lead names" → lists QR Code & UPI Payment Setup, New POS System Upgrade*
 
 #### Priority Query — Real-Time DB Context
-> ![Priority AI](After%20login%20leads.JPG)
+> <img width="1360" height="672" alt="After login leads" src="https://github.com/user-attachments/assets/5cb241dd-a90f-4c30-962f-d543e8bfb8b2" />
 > *"Priority for QR Code & UPI Payment Setup?" → "Critical. Entity type: LEAD."*
 
 #### Contact Intelligence — Phone Numbers
-> ![Contact AI](After%20login%20leads4.JPG)
+> <img width="1358" height="686" alt="After login leads4" src="https://github.com/user-attachments/assets/b2fefa05-aaec-477f-bccb-b11257a527c1" />
 > *Returns full contact list with phone numbers from live database*
 
 #### Full Contact Details — Designation + Email
-> ![Contact Full](After%20login%20leads5.JPG)
+> <img width="1360" height="684" alt="After login leads5" src="https://github.com/user-attachments/assets/19fff9f0-0571-4bc8-9f4a-ce19fc39ecce" />
 > *Structured output: name, designation, email — all from live CRM data*
 
 ### Implementation Highlights
