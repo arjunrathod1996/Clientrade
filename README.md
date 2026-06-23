@@ -554,11 +554,11 @@ GET  /api/health/history   → List past reports
 ### Screenshots
 
 #### Health Monitoring Dashboard — Infrastructure & Business Modules
-> ![Health Check 1](Healthcheck1.JPG)
+> <img width="1352" height="574" alt="Audit 1" src="https://github.com/user-attachments/assets/a884ade8-3a01-4d69-ba0b-c482610b52dc" />
 > *All layers monitored: MySQL, Kafka, Redis, Groq AI, Ollama, Leads, Contacts, Activities, UI endpoints*
 
 #### Automated HTML Email Report
-> ![Health Check Email](Healthcheck2.JPG)
+> <img width="1354" height="580" alt="Audit 2" src="https://github.com/user-attachments/assets/1cc17e2b-c405-4576-82fd-fe9a7b169b75" />
 > *Color-coded HTML email report sent at 10 AM, 1 PM, 7 PM IST via JavaMailSender*
 
 ---
