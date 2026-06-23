@@ -354,7 +354,7 @@ public ResponseEntity<?> generateOtp(@RequestParam String mobileNumber,
 ```
 
 #### OTP Rate Limiting Screenshot
-> ![OTP Rate Limiting](Too%20Many%20OTP%20Requested.JPG)
+> <img width="982" height="502" alt="Too Many OTP Requested" src="https://github.com/user-attachments/assets/2b9ce638-477e-4cdd-a907-fc428e8b6099" />
 > *HTTP 429 response: "Too many requests. Please wait 60 seconds before trying again."*
 
 ### Role-Based Data Isolation
@@ -370,7 +370,7 @@ List<Lead> findByMerchantAdminAndStatus(Long adminId, String status);
 ```
 
 #### Data Isolation Screenshot
-> ![Role Data Isolation](another%20user%20same%20role%20without%20data.JPG)
+> <img width="1364" height="684" alt="another user same role without data" src="https://github.com/user-attachments/assets/a1373f0c-6532-4d7a-9cff-1e5c4d969569" />
 > *Same Merchant Admin role, different user → "No data available in table" / "No relevant CRM data found"*
 
 ### Security Config Overview
