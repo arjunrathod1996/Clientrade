@@ -110,11 +110,11 @@ The system prompt is engineered to **reject** any non-CRM question and redirect 
 ### Screenshots
 
 #### Before Login — AI Robo Assistant (General)
-> ![Before Login AI](Before%20login.JPG)
+> ![Before Login AI] <img width="1347" height="679" alt="Before login" src="https://github.com/user-attachments/assets/91b57917-48f4-4db5-bdb5-947e7f2316ab" />
 > *Homepage general AI Robo — answers broad questions, available to all visitors*
 
 #### After Login — CRM AI Assistant Activated
-> ![After Login CRM AI](After%20login%20leads.JPG)
+> ![After Login CRM AI] <img width="1360" height="672" alt="After login leads" src="https://github.com/user-attachments/assets/e50347bc-bf87-4451-b565-16671fcca526" />
 > *Post-login CRM AI greets user, lists its scope: Leads, Contacts, Activities, Follow-ups, Sales insights*
 
 #### Out-of-Scope Query Rejection
