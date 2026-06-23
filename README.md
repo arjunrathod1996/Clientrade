@@ -1,248 +1,1127 @@
-# Clientrade
-RevitalizeCRM: Empowering businesses with a comprehensive Retail CRM and Customer Engagement platform. Seamlessly enhance online and offline interactions to capture the complete customer journey. (Currently in development to include offline interactions.) Continuously evolving to deliver excellence.
+<div align="center">
 
-# Role Hierarchy: 
-![Slide 1 of Presentation1](https://github.com/arjunrathod1996/Clientrade/assets/110610821/5829bc6b-f897-401f-9da0-28db137401d2)
+# 🚀 Clientrade — Full Stack CRM & Trade Platform
 
-# Merchant Admins:
-- An admin can create multiple merchant admins within each business.
-- Each merchant admin has authority over a specific aspect or category within the business, such as food, electronics, etc.
-- Merchant admins can create items/products within their assigned category.
+### *Empowering businesses with intelligent customer engagement, AI-driven insights, and enterprise-grade security*
 
-# Merchant Staff:
-- Merchant admins can manage multiple merchant staff members within their category.
-- Merchant staff members work under a specific merchant admin and are responsible for day-to-day operations.
-- Each staff member may be assigned to a specific location or area within the business.
+[![Java](https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com/)
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![Thymeleaf](https://img.shields.io/badge/Thymeleaf-005F0F?style=for-the-badge&logo=thymeleaf&logoColor=white)](https://www.thymeleaf.org/)
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Claude API](https://img.shields.io/badge/Claude_API-AI_Chatbot-8B5CF6?style=for-the-badge&logo=anthropic&logoColor=white)](https://www.anthropic.com/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 
-# Example Scenario:
-- Business: Restaurant
-- Admin creates Merchant Admin 1 (Food) for managing food-related items.
-- Merchant Admin 1 creates items/products for different food categories (e.g., appetizers, main courses, desserts).
-- Merchant Admin 1 assigns Merchant Staff 1 to handle orders and operations in one location (e.g., Bansankari) and Merchant Staff 2 for another location (e.g., BTM).
-- Each Merchant Staff member manages orders and ensures smooth operations within their assigned location.
+---
 
-# JWTAuthFilter Class:
-- This class extends OncePerRequestFilter, which ensures that the filter is only applied once per request.
-- It intercepts incoming requests and performs JWT authentication.
-- It extracts the JWT token from the request and validates it.
-- If the token is valid, it sets the authentication in the SecurityContextHolder.
-- If the token is not valid, it logs a warning.
-- It also has a method to check if the given username is an email or phone number.
-- The extractTokenFromRequest method extracts the JWT token from the request cookies.
+> **Not just another CRM.** Clientrade is a production-grade retail CRM & customer engagement platform with an integrated **Claude API AI Chatbot**, DB trigger audit trails, OTP rate limiting, 3-tier role hierarchy, JWT + OTP + OAuth2 security, and full lead lifecycle management — built entirely from scratch.
 
-# SecurityConfig Class:
-- This class is annotated with @Configuration and @EnableWebSecurity, indicating that it defines security configurations for the web application.
-- It configures authentication and authorization settings.
-- It defines beans for various security-related components such as PasswordEncoder, DaoAuthenticationProvider, AuthenticationManager, etc.
-- It configures HTTP security rules using HttpSecurity.
-- It sets up CORS, CSRF protection, and session management.
-- It configures URL-based access control using .authorizeRequests().
-- It defines exception handling for authentication and access denied cases.
-- It adds JWTAuthFilter before UsernamePasswordAuthenticationFilter in the filter chain.
-- It defines success and failure handlers for OAuth2 authentication.
+---
 
-# OAuthenticationSuccessHandler Class:
-- This class handles successful OAuth2 authentication.
-- It retrieves user information from the OAuth2 principal and determines the provider.
-- It extracts user details such as email, first name, last name from the OAuth2 principal.
-- It saves the customer if not already existing and creates a new user.
-- It generates a JWT token for the authenticated user and sets it in the response cookie.
-- It redirects the user to the access page after successful authentication.
+</div>
 
-# UsersVerification Class:
-- This class represents the entity for storing user verification information.
-- It defines enums for status and content type.
-- It has fields for user, content, verification code, and status.
-- It sets creation time and update time before persisting.
+## 📋 Table of Contents
 
-# Controller Methods:
-- These methods handle HTTP POST requests for generating and verifying OTP.
-- The authenticateAndGetGeneratedOtp method generates a random 4-digit OTP, retrieves the user by mobile number, and saves the OTP in the database.
-- The generateOTP method generates a random OTP and Automatically Taken OTP field.
-- The verifyOtp method verifies the OTP entered by the user, generates a JWT token for the user, and sets it in the response cookie. Finally, it redirects the user to the access page.
-  
-## Screenshots
+| # | Section |
+|---|---------|
+| 1 | [✨ What Makes Clientrade Different](#-what-makes-clientrade-different) |
+| 2 | [🤖 AI Chatbot Assistant — Claude API](#-ai-chatbot-assistant--claude-api) |
+| 3 | [🏗️ Architecture & Tech Stack](#%EF%B8%8F-architecture--tech-stack) |
+| 4 | [👥 Role Hierarchy](#-role-hierarchy) |
+| 5 | [🔐 Security & Authentication](#-security--authentication) |
+| 6 | [📋 DB Trigger Audit Trail](#-db-trigger-audit-trail) |
+| 7 | [🩺 Health Monitoring System](#-health-monitoring-system) |
+| 8 | [🎯 Lead CRM — Full Lifecycle](#-lead-crm--full-lifecycle) |
+| 9 | [🛒 Cart, Billing & Invoice System](#-cart-billing--invoice-system) |
+| 10 | [📊 Insights Dashboard](#-insights-dashboard) |
+| 11 | [🎰 Lucky Draw / Raffle System](#-lucky-draw--raffle-system) |
+| 12 | [❓ FAQ System](#-faq-system) |
+| 13 | [📱 PWA & Browser API Features](#-pwa--browser-api-features) |
+| 14 | [🌐 Language Translation](#-language-translation) |
+| 15 | [🔧 Feature Toggle System](#-feature-toggle-system) |
+| 16 | [📁 Project Structure](#-project-structure) |
+| 17 | [🚀 Getting Started](#-getting-started) |
 
-### Home
-![AboutContactUsServices](https://github.com/arjunrathod1996/Clientrade/assets/110610821/8b94fb05-6773-4564-955e-961263690046)
+---
 
-### Admin Login Page
-![AdminLogin](https://github.com/arjunrathod1996/Clientrade/assets/110610821/2afb152d-89f0-4b8d-bbd2-736dadd5a38d)
+## ✨ What Makes Clientrade Different
 
-### JWT Token Generated
-![JWT Token Generated](https://github.com/arjunrathod1996/Clientrade/assets/110610821/cb4a87d3-2609-415a-b2d5-e343bbc66fec)
+Most CRM demos show a basic CRUD app. Clientrade is built with production patterns:
 
-### Dashboard [Same Dashboard All Roles but Here We can show Counts , Graph Example : Customer daily count, Lead Count, Transaction Count etc with respect to role wise...]
-![Dashboard](https://github.com/arjunrathod1996/Clientrade/assets/110610821/d0bcef8b-25d4-4e25-9e5a-7799afe9c67e)
+```
+✅ AI Chatbot (Claude API) — domain-scoped, context-aware, rate-limited
+✅ DB-level audit trails via MySQL triggers (not application code)
+✅ OTP rate limiting with 429 Too Many Requests enforcement
+✅ Role-based data isolation enforced at the SQL query level
+✅ JWT + OTP + OAuth2 (Google & GitHub) — all three in one system
+✅ Apache POI Excel & ITextRenderer PDF — zero disk I/O, in-memory streaming
+✅ Spring @Scheduled health monitoring with HTML email reports
+✅ PWA: Web OTP API, Contact Picker API, Geo Code API
+✅ 3-tier role hierarchy with category + location scoping
+```
 
-### Create and Edit Form [Similary For other Forms we can do like this]
-![Untitled](https://github.com/arjunrathod1996/Clientrade/assets/110610821/ba69c32b-b9a2-4659-a34f-5f0fca6d178c)
+---
 
-### Merchant Admin and Merchant Staff Table
-![Merchant andt Merchant Staff Table](https://github.com/arjunrathod1996/Clientrade/assets/110610821/25d17627-aadf-46f9-8917-115cccedb22e)
+## 🤖 AI Chatbot Assistant — Claude API
 
-### Merchant Admin Logged In Table
-![MerchantStaff](https://github.com/arjunrathod1996/Clientrade/assets/110610821/dff5a0df-cc61-4477-a873-92538580c082)
+> The flagship feature. Not a generic chatbot — a **CRM-aware AI assistant** that understands your live business data.
 
-### Merchant Admin Can Assign and Edit Items/Producs For Merchant Staff with respect to categoty and different Location.
-![AddAndEditItemProducts](https://github.com/arjunrathod1996/Clientrade/assets/110610821/a58b9931-e3b6-4496-a12b-0e463dbddc0d)
+### How It Works
 
-## After Adding or Assign All Items and Products, Now In Membership App
-### Here Customer Can log in With Using Phone Number and then they can stored CUSTOMER_ROLE in database
-![CustomerLoggInWithOTP](https://github.com/arjunrathod1996/Clientrade/assets/110610821/a4924e4f-3246-4dd1-9258-6aeeb8bcc2f5)
+```
+User asks: "What is the priority for QR Code & UPI Payment Setup lead?"
+      ↓
+AI fetches live CRM context (leads, contacts, activities from DB)
+      ↓
+Claude API processes domain-scoped prompt
+      ↓
+"Priority for QR Code & UPI Payment Setup is Critical. Entity type: LEAD."
+```
 
-### Customer Interface After Logged In
-![CustomerProfile](https://github.com/arjunrathod1996/Clientrade/assets/110610821/8255c5d1-f47b-4b4a-8611-3664891f0321)
-- Here, I used the Geo Code API to fetch merchant stores based on the location of the merchant staff.
-- First, we need to update the customer's first name and last name, and ensure their profile score is more than 50%. Only then can we fetch merchant stores.
-  
-### Merchant Stores and Activity
-![CustomerMerchanMainAdminandActivity](https://github.com/arjunrathod1996/Clientrade/assets/110610821/aa244df9-baa4-406a-bb41-b267a88daf5c)
-- After clicking on the respective merchant admin, we can view the merchant staff stores located in relation to the merchant admin and their category.
+### Dual AI Personalities
 
-### Merchant Stores and Item With Respect Category and Location
-![MerchantStoreWithItems](https://github.com/arjunrathod1996/Clientrade/assets/110610821/ca65ec12-853a-4082-aa92-2df1cc78892b)
-- In the merchant store, we can view food items categorized by type and see the average reviews from other customers, allowing us to make informed food orders.
-### Cart Item
-![Added Cart Items](https://github.com/arjunrathod1996/Clientrade/assets/110610821/835f0f7c-b071-46dd-94d1-b1c23f824f02)
-- Food items can be added to the cart and ordered whenever desired.
-### Invoice or Purchase Item
-![Invoice](https://github.com/arjunrathod1996/Clientrade/assets/110610821/38b5b9f0-3a28-4d45-9915-8e4a96a81f4d)
-- When ordering, if we decide not to include a specific item or food, we can cancel it, and the updated total quantity of items will be displayed. The price will be recalculated based on the quantity, and the grand total amount will be updated accordingly.
-### Purchase History
-![purchase History](https://github.com/arjunrathod1996/Clientrade/assets/110610821/32512c7b-9e0d-499d-9468-d47b9b63b017)
-- After completing a purchase, the cart page will be cleared. All items ordered by the customer can be tracked in the purchase history.
-### Review
-![Review](https://github.com/arjunrathod1996/Clientrade/assets/110610821/f69ea1c1-1f10-4ae0-9845-7784d01ad7db)
-- After completing a purchase, the customer can give a review for the purchased item and update it later if needed.
-### Update Profile
-![update profile](https://github.com/arjunrathod1996/Clientrade/assets/110610821/a5e3ddea-16bb-4f5d-a803-6de3bffcd042)
-### Refer Contact
-![Refer1](https://github.com/arjunrathod1996/Clientrade/assets/110610821/ff96e323-3a2d-41ae-b338-c00ed8794db8)
-![refer2](https://github.com/arjunrathod1996/Clientrade/assets/110610821/22697315-be32-4ede-a524-b26621a549f6)
-- Implemented "Refer" feature in the contact manager support section.
-- Users can select up to 10 contacts, similar to WhatsApp.
-- Users have the flexibility to pick contacts and deselect any they choose not to refer.
-- The system automatically filters out invalid and duplicate phone numbers.
-- Only valid and distinct phone numbers are sent.
-- Selected contacts are displayed using tagsinput.
-- In the database, contacts are stored relative to the associated merchant store and the user ID of the merchant staff.
-- Existing customer contacts are skipped to avoid duplication.
-- The system restricts the number of successfully referred contacts to a maximum of 10.
-- Displays the number of successfully referred contacts to the user. For example, if 4 contacts are selected, but only 2 of them are new and successfully referred, the system indicates that 2 contacts were successfully referred.
-### Displayed Customer List in Table With Respect Merchant Staff
-![MerchantStaff123](https://github.com/arjunrathod1996/Clientrade/assets/110610821/4baa5ff1-3f33-420c-b3dc-4e314d248b17)
-### Dynamic Laguage Translation
-![langugage](https://github.com/arjunrathod1996/Clientrade/assets/110610821/91d18bc1-42ee-46b4-8085-8400e6d71f6b)
-- Implemented dynamic language support, allowing translations into Kannada and Hindi. Similar functionality can be extended to support other languages as well, ensuring accessibility for diverse user bases.
+| State | AI Mode | Behaviour |
+|-------|---------|-----------|
+| **Before Login** | 🤖 AI Robo Assistant | General-purpose, available on homepage. Answers broad questions — "What is Java?", "Explain REST APIs" |
+| **After Login** | 🧠 CRM AI Assistant | Domain-restricted to CRM data only. Activates with your role-scoped lead/contact/activity data |
 
-# Insight (Dashboard)
-![Insight1](https://github.com/arjunrathod1996/Clientrade/assets/110610821/3ced7863-2939-44d6-9e8b-547e930117e4)
-![Insight2](https://github.com/arjunrathod1996/Clientrade/assets/110610821/c8a436e6-34b5-4aee-999a-c53b0879cea1)
-- The merchant admin can track the total number of customers under their management.
-- Customers can be categorized based on purchased items or products.
-- The system displays:
-  1. Completed status counts and amounts for completed purchases.
-  2. Pending status counts and amounts for pending purchases.
-  3. Rejected status counts and amounts for rejected purchases.
-- A 6-month bar graph visualizes the completed status counts and amounts.
-- The system identifies top customers based on:
-  1. The highest number of purchased items.
-  2. Total spending.
-- Date-wise search functionality is supported for detailed tracking and analysis.
-![insight3](https://github.com/arjunrathod1996/Clientrade/assets/110610821/847d6829-932b-482e-baf7-27592a61d426)
-- Clicking on a specific status count redirects the admin to the bill summary page, where they can track details with respect to individual customers.
-### For Example :
-![Insight4](https://github.com/arjunrathod1996/Clientrade/assets/110610821/9ee7eadd-58cb-45d6-9cce-01e0272577f5)
-![Insight5](https://github.com/arjunrathod1996/Clientrade/assets/110610821/e412ab68-2ee9-4291-835f-f51b227ea980)
-### Export Data in Excel Sheet and Download Invoice
-![Insight6](https://github.com/arjunrathod1996/Clientrade/assets/110610821/9f271d54-f530-447e-ac71-bdc710c7bcab)
-![Insight7](https://github.com/arjunrathod1996/Clientrade/assets/110610821/5af64ef2-7a58-4bd0-91ca-61e7e44567f4)
-![Insight8](https://github.com/arjunrathod1996/Clientrade/assets/110610821/d493b8d9-79e0-4020-8315-355f5cda4da4)
-- All data can be exported to an Excel sheet.
-- To export all customer data, the admin needs to select the check box before exporting.
-- To export filtered data, checking the check box is not required.
-- The merchant can download invoices in PDF format.
-- To download a customer invoice, the check box must be checked beforehand.
-- The merchant admin can provide the relevant customer with the downloaded invoice.
-### Exported Data and Invoice
-![d1](https://github.com/arjunrathod1996/Clientrade/assets/110610821/5b431fc0-ab5c-46d8-958a-d31fcbf646a9)
-![i1](https://github.com/arjunrathod1996/Clientrade/assets/110610821/41074c2a-d7b9-4feb-aaff-66446897aedd)
+### Domain Scoping — Out-of-Scope Rejection
 
-# FAQ Section Enhancement Description
+```
+User: "What is React?"
+AI:   "I can assist only with CRM-related queries.
+       Please ask about: Leads, Contacts, Activities, Follow-ups, Sales insights."
+```
 
-### Create FAQ Section 
-![faq1](https://github.com/arjunrathod1996/Clientrade/assets/110610821/8dbd0fff-16a1-4e5e-8425-2eb479001d91)
-![faq2](https://github.com/arjunrathod1996/Clientrade/assets/110610821/7fd825ed-c8d3-4059-93ca-26b96b929585)
-- Merchant Admin Can Create Frequenctly Asked Quesions with respect to Business For Membership App
-### FAQ In Membership App
-![ffff](https://github.com/arjunrathod1996/Clientrade/assets/110610821/651620aa-cee2-47b7-b127-16a85b609bb2)
-In the FAQ section of the membership app, we display the most frequently asked questions related to the business. Each FAQ entry consists of a topic, multiple questions, and corresponding answers. The answers can be presented in various formats, including text, images, embedded videos, or any other multimedia format. The order of topics can be rearranged to suit the needs of the business or the preferences of the admin. When the FAQ page loads, the most popular or relevant topic is automatically expanded by default, providing users immediate access to crucial information.
-## Detailed Explanation
-### Topics and Questions:
-  1. Each topic represents a category or subject area under which multiple questions are grouped. For example, a topic could be "Membership Plans" with questions like "What are the different membership plans?" and "How do I upgrade my plan?"
-### Answers in Various Formats:
-  1. Answers can be displayed as plain text, images, or embedded videos. This allows for flexibility in how information is conveyed, making it easier for users to understand complex answers.
-  2. For example, an answer to a question about how to use a feature might include a step-by-step text explanation, a screenshot, and a video tutorial.
-### Changing Topic Order:
-  1. Merchant Admins have the ability to reorder the topics. This is useful for prioritizing the most common or important topics, ensuring that they appear at the top of the FAQ section.
-### Default Open Topic:
-  1. When the FAQ page loads, the system automatically opens the most relevant or frequently accessed topic by default. This provides users with immediate access to the most important information without needing to navigate through the list.
-  2 The default topic can be determined based on user interaction data, such as the number of clicks or search frequency, ensuring that the most sought-after information is readily available.
-### User-Friendly Interface:
-  1. The FAQ section is designed to be user-friendly, with a clean and intuitive interface. Users can easily browse through topics, click on questions to reveal answers, and view multimedia content without leaving the page.
-  2. The layout is responsive, ensuring a seamless experience across different devices, including desktops, tablets, and smartphones.
-### Search Functionality:
-  1. Users can search for specific topics or questions using a search field. This makes it easy to find relevant information quickly without browsing through all the topics.
+The system prompt is engineered to **reject** any non-CRM question and redirect politely — keeping the assistant professional and focused.
 
-# Lead
-## Lead Main
-![leadMain1](https://github.com/arjunrathod1996/Clientrade/assets/110610821/92652ce2-815a-435a-a5e6-9d4c1991c628)
-![leadMainTable](https://github.com/arjunrathod1996/Clientrade/assets/110610821/e0ae149f-5bda-46ae-80fd-42e943cee310)
-- Leads are created in the LeadMain table. Examples of leads include "Kaanti Sweets" and "Biba Cloths" in Bengaluru.
-- Each lead entry requires specifying the source of the lead (e.g., store visit, enquiry, campaign, and others).
-- Leads are categorized based on their respective industry or type.
-- A priority level is assigned to each lead (low, medium, high).
-- A boolean field is available to mark the lead as very important if necessary.
-## Lead Contact
-![LeadContact](https://github.com/arjunrathod1996/Clientrade/assets/110610821/4d00cccd-ffae-4c16-8354-097e80e12b59)
-- Each lead can have multiple contacts associated with it, created under the LeadContact table.
-- Contacts can have different designations within the lead organization.
-- Additional details such as social media links, email addresses, and phone numbers are recorded for each contact.
-## Lead Activity
-![Lead Activity](https://github.com/arjunrathod1996/Clientrade/assets/110610821/dece12c7-e327-4f66-8e29-968bf8650ad2)
-- Activities related to each lead and its contacts are recorded in the LeadActivity table.
-- Activities can include different types of interactions such as calls, emails, or meetings.
-- The status of each activity must be recorded, indicating whether the contact responded (open) or the activity is completed or canceled.
-- Follow-up dates are recorded for continued engagement until the lead contact person reaches a conclusion.
-- If the contact person is ready to proceed with the product (CRM), the status is marked as complete. If the contact is not interested, the status is marked as canceled or not interested.
-- Merchant admins can assign lead activities to merchant staff.
-  for Example :
-  ![AssighLeadsFromMerchantAdmin](https://github.com/arjunrathod1996/Clientrade/assets/110610821/e33493d6-c04c-414d-9357-a53f5a8297e9)
-  ![Assigned Leads](https://github.com/arjunrathod1996/Clientrade/assets/110610821/9171b78b-e753-42f6-9323-508b3fc36d8e)
+### What the CRM AI Can Answer
 
-# Enable and Disable Key Feature
-## Enable Feature :
-![AdminPermission](https://github.com/arjunrathod1996/Clientrade/assets/110610821/3318d61e-caa4-4f1c-8fd7-28e6c6bf2269)
-![enableActivity](https://github.com/arjunrathod1996/Clientrade/assets/110610821/48b4cade-8676-4f70-b5f8-0c810816dedc)
-- The admin can enable key features for the Membership App, such as Appointment and Submit Bill.
-## Disable Feature :
-![After unchecked](https://github.com/arjunrathod1996/Clientrade/assets/110610821/5ed47a4e-cb43-4687-91e1-fda551a9acd3)
-![Afteruumembership](https://github.com/arjunrathod1996/Clientrade/assets/110610821/b4f0f7dc-49e6-468a-a5b5-d0543a9ea30d)
-- The admin can disable key features for the Membership App, such as Appointment and Submit Bill.
+| Query Type | Example | AI Response |
+|------------|---------|-------------|
+| Lead Count | "Total leads?" | "Total leads: 2. Entity types: LEAD." |
+| Lead Names | "Give me lead names" | Lists all lead names with IDs |
+| Priority | "What is priority for X?" | "Priority for X is Critical. Entity type: LEAD." |
+| Contacts | "Total contacts?" | "Total contacts: 4. Entity type: CONTACT." |
+| Phone Numbers | "Contact names and phone numbers" | Returns full structured contact list |
+| Full Details | "Name, designation, and email for all contacts" | Returns complete contact profiles |
+| Activities | "Any follow-ups scheduled?" | Pulls from LeadActivity table |
+| Sales Insights | "Summary of leads by status?" | Aggregated CRM intelligence |
 
-# Security :
-- If the credentials are entered incorrectly, redirect back to the login page.
-- We can log in directly using Google and GitHub accounts in the membership app.
-  
-- When a user manually enters a URL like "http://localhost:8080/loginwewew" and encounters an error, the message displayed is: "This page isn’t working. If the problem continues, contact the site owner. HTTP ERROR 401."
-![Error404](https://github.com/arjunrathod1996/Clientrade/assets/110610821/8a8eac66-db62-4886-881d-1198d2c5e56a)
+### Screenshots
 
-- If a user is logged in and attempts to access a URL that doesn't exist, a custom error message should be displayed.
-![Eror4041](https://github.com/arjunrathod1996/Clientrade/assets/110610821/ee49b104-d9a6-4646-8531-f1c203c4033e)
+#### Before Login — AI Robo Assistant (General)
+> ![Before Login AI](Before%20login.JPG)
+> *Homepage general AI Robo — answers broad questions, available to all visitors*
 
+#### After Login — CRM AI Assistant Activated
+> ![After Login CRM AI](After%20login%20leads.JPG)
+> *Post-login CRM AI greets user, lists its scope: Leads, Contacts, Activities, Follow-ups, Sales insights*
 
+#### Out-of-Scope Query Rejection
+> ![Out of Scope](out%20scope%20domain.JPG)
+> *Asking "What is Java?" → AI correctly rejects and redirects to CRM topics only*
 
+#### Lead Intelligence — Count & Names
+> ![Leads AI](After%20login%20leads2.JPG)
+> *"Total leads?" → 2. "Give me lead names" → lists QR Code & UPI Payment Setup, New POS System Upgrade*
 
+#### Priority Query — Real-Time DB Context
+> ![Priority AI](After%20login%20leads.JPG)
+> *"Priority for QR Code & UPI Payment Setup?" → "Critical. Entity type: LEAD."*
 
+#### Contact Intelligence — Phone Numbers
+> ![Contact AI](After%20login%20leads4.JPG)
+> *Returns full contact list with phone numbers from live database*
 
+#### Full Contact Details — Designation + Email
+> ![Contact Full](After%20login%20leads5.JPG)
+> *Structured output: name, designation, email — all from live CRM data*
+
+### Implementation Highlights
+
+```java
+// Domain-scoped system prompt (simplified)
+String systemPrompt = """
+    You are a CRM Assistant for Clientrade.
+    You ONLY answer questions about: Leads, Contacts, Activities, Follow-ups, Sales Insights.
+    If asked about anything else (Java, React, general topics), respond:
+    "I can assist only with CRM-related queries. Please ask about: Leads, Contacts, 
+     Activities, Follow-ups, Sales insights."
+    
+    Current user CRM context:
+    %s
+    """.formatted(buildCrmContext(userId));
+
+// Rate limiting on AI endpoint
+@RateLimiter(name = "aiEndpoint", fallbackMethod = "aiRateLimitFallback")
+public ResponseEntity<?> askAI(@RequestBody AiRequest request) { ... }
+```
+
+---
+
+## 🏗️ Architecture & Tech Stack
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                        CLIENTRADE PLATFORM                      │
+├─────────────────────┬───────────────────────────────────────────┤
+│   PRESENTATION      │  Thymeleaf + Bootstrap + Tailwind CSS     │
+│   LAYER             │  AJAX / jQuery · Responsive UI · PWA      │
+├─────────────────────┼───────────────────────────────────────────┤
+│   SECURITY          │  Spring Security · JWTAuthFilter          │
+│   LAYER             │  OAuth2 (Google/GitHub) · OTP Auth        │
+│                     │  Rate Limiting · CORS / CSRF              │
+├─────────────────────┼───────────────────────────────────────────┤
+│   BUSINESS          │  Spring Boot · Spring MVC                 │
+│   LAYER             │  @Scheduled Cron Jobs                     │
+│                     │  Claude API (AI Chatbot)                  │
+│                     │  JavaMailSender (Health Reports)          │
+├─────────────────────┼───────────────────────────────────────────┤
+│   DATA              │  Spring Data JPA · Hibernate              │
+│   LAYER             │  MySQL · DB Triggers (Audit Trail)        │
+│                     │  Liquibase Migrations                     │
+├─────────────────────┼───────────────────────────────────────────┤
+│   EXPORT            │  Apache POI (Excel .xlsx)                 │
+│   LAYER             │  ITextRenderer / Flying Saucer (PDF)      │
+│                     │  StreamingResponseBody (zero disk I/O)    │
+└─────────────────────┴───────────────────────────────────────────┘
+```
+
+### Technology Breakdown
+
+| Category | Technologies |
+|----------|-------------|
+| **Backend** | Java 17+, Spring Boot 3.x, Spring MVC, Spring Security, Hibernate / JPA |
+| **Frontend** | Thymeleaf, Bootstrap, Tailwind CSS, AJAX, jQuery |
+| **Database** | MySQL, Spring Data JPA, DB Triggers, Liquibase |
+| **AI** | Claude API (Anthropic), Domain-scoped prompts, Rate limiting |
+| **Security** | JWT, Spring Security, OAuth2 (Google, GitHub), OTP Auth, BCrypt |
+| **File Export** | Apache POI (XSSFWorkbook), ITextRenderer (Flying Saucer), PDF streaming |
+| **Health** | Spring @Scheduled, JavaMailSender, REST health endpoints |
+| **PWA / Browser APIs** | Web OTP API, Contact Picker API, Geo Code API |
+| **i18n** | Spring LocaleResolver (EN / Hindi / Kannada / Spanish) |
+| **Build** | Maven, Git |
+
+---
+
+## 👥 Role Hierarchy
+
+```
+                        ┌─────────────┐
+                        │    ADMIN    │
+                        │  (Platform) │
+                        └──────┬──────┘
+                               │  Creates businesses + Merchant Admins
+                    ┌──────────┴──────────┐
+                    │                     │
+             ┌──────┴──────┐       ┌──────┴──────┐
+             │  MERCHANT   │       │  MERCHANT   │
+             │ ADMIN (Food)│       │ADMIN (Elec.)│
+             └──────┬──────┘       └──────┬──────┘
+                    │ Creates staff           │
+         ┌──────────┼──────────┐             │
+         │          │          │             │
+   ┌─────┴────┐ ┌───┴────┐ ┌──┴─────┐   ┌──┴─────┐
+   │  STAFF   │ │ STAFF  │ │ STAFF  │   │ STAFF  │
+   │Bansankari│ │  BTM   │ │Koramng.│   │Indiranr│
+   └──────────┘ └────────┘ └────────┘   └────────┘
+```
+
+![Role Hierarchy](https://github.com/arjunrathod1996/Clientrade/assets/110610821/5829bc6b-f897-401f-9da0-28db137401d2)
+
+### Key Isolation Rules
+
+- **Admin** → Full platform visibility across all businesses
+- **Merchant Admin** → Sees only their category (e.g., Food) within their business
+- **Merchant Staff** → Sees only their assigned location data
+- **Same role, different user = zero data overlap** — enforced at the **SQL query level**, not UI filtering
+
+### Example Scenario
+
+```
+Business: Restaurant
+
+Admin creates:
+  └── Merchant Admin 1 (Food Category)
+          ├── Creates food items: Appetizers, Main Courses, Desserts
+          ├── Staff 1 → Bansankari location (handles orders there)
+          └── Staff 2 → BTM layout location (handles orders there)
+```
+
+---
+
+## 🔐 Security & Authentication
+
+### Three Authentication Modes in One System
+
+```
+         ┌──────────────────────────────────────────┐
+         │           LOGIN OPTIONS                   │
+         ├──────────────┬───────────────┬────────────┤
+         │  Phone OTP   │  Google OAuth │ GitHub     │
+         │  (4-digit)   │  OAuth2       │ OAuth2     │
+         └──────┬───────┴───────┬───────┴────┬───────┘
+                │               │            │
+                └───────────────┴────────────┘
+                                │
+                    ┌───────────▼───────────┐
+                    │   JWT Token Generated  │
+                    │   Set in HTTP Cookie   │
+                    └───────────┬───────────┘
+                                │
+                    ┌───────────▼───────────┐
+                    │   JWTAuthFilter        │
+                    │   (OncePerRequestFilter│
+                    │   Validates every req) │
+                    └───────────────────────┘
+```
+
+### JWTAuthFilter
+
+```java
+// Extends OncePerRequestFilter — runs exactly once per request
+public class JWTAuthFilter extends OncePerRequestFilter {
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request,
+                                    HttpServletResponse response,
+                                    FilterChain filterChain) {
+        // 1. Extract JWT from cookie
+        String token = extractTokenFromRequest(request);
+        
+        // 2. Validate token
+        if (token != null && jwtService.isTokenValid(token)) {
+            // 3. Set authentication in SecurityContext
+            UsernamePasswordAuthenticationToken auth = ...;
+            SecurityContextHolder.getContext().setAuthentication(auth);
+        } else {
+            log.warn("Invalid or missing JWT token");
+        }
+        
+        filterChain.doFilter(request, response);
+    }
+}
+```
+
+### OAuth2 Success Handler
+
+```java
+public class OAuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
+
+    @Override
+    public void onAuthenticationSuccess(...) {
+        OAuth2User oAuth2User = (OAuth2AuthenticationToken) authentication;
+        
+        // Extract: email, firstName, lastName from Google/GitHub principal
+        String email = oAuth2User.getAttribute("email");
+        
+        // Save customer if not already existing
+        customerService.saveIfNotExists(email, firstName, lastName);
+        
+        // Generate JWT token
+        String jwtToken = jwtService.generateToken(userDetails);
+        
+        // Set JWT in response cookie
+        Cookie cookie = new Cookie("JWT_TOKEN", jwtToken);
+        response.addCookie(cookie);
+        
+        // Redirect to access page
+        response.sendRedirect("/access");
+    }
+}
+```
+
+### OTP Rate Limiting — 429 Protection
+
+```java
+@PostMapping("/generate-otp")
+public ResponseEntity<?> generateOtp(@RequestParam String mobileNumber,
+                                      HttpServletRequest request) {
+    // Check rate limit: last OTP generated within 60 seconds?
+    if (otpService.isRateLimited(mobileNumber)) {
+        return ResponseEntity
+            .status(HttpStatus.TOO_MANY_REQUESTS)    // 429
+            .body("Too many requests. Please wait 60 seconds before trying again.");
+    }
+    
+    // Generate 4-digit OTP, save to DB, send via SMS
+    String otp = generateRandomOtp();
+    otpService.saveOtp(mobileNumber, otp);
+    smsService.send(mobileNumber, otp);
+    
+    return ResponseEntity.ok("OTP sent successfully.");
+}
+```
+
+#### OTP Rate Limiting Screenshot
+> ![OTP Rate Limiting](Too%20Many%20OTP%20Requested.JPG)
+> *HTTP 429 response: "Too many requests. Please wait 60 seconds before trying again."*
+
+### Role-Based Data Isolation
+
+```java
+// ❌ WRONG — returns all data, no isolation
+@Query("SELECT l FROM Lead l WHERE l.status = :status")
+List<Lead> findByStatus(String status);
+
+// ✅ RIGHT — scoped to the authenticated user's business/role
+@Query("SELECT l FROM Lead l WHERE l.merchantAdmin.id = :adminId AND l.status = :status")
+List<Lead> findByMerchantAdminAndStatus(Long adminId, String status);
+```
+
+#### Data Isolation Screenshot
+> ![Role Data Isolation](another%20user%20same%20role%20without%20data.JPG)
+> *Same Merchant Admin role, different user → "No data available in table" / "No relevant CRM data found"*
+
+### Security Config Overview
+
+```java
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+    // PasswordEncoder (BCrypt)
+    // DaoAuthenticationProvider
+    // AuthenticationManager
+    // CORS + CSRF configuration
+    // Session management (STATELESS — JWT-based)
+    // URL-based access control (.authorizeHttpRequests())
+    // OAuth2 login with custom success/failure handlers
+    // JWTAuthFilter injected before UsernamePasswordAuthenticationFilter
+    // Custom 401 / 404 error pages
+}
+```
+
+---
+
+## 📋 DB Trigger Audit Trail
+
+> **Zero application code for auditing.** MySQL AFTER triggers capture every data change automatically.
+
+### How It Works
+
+```sql
+-- Trigger on the `user` table (example)
+DELIMITER $$
+
+CREATE TRIGGER after_user_update
+AFTER UPDATE ON user
+FOR EACH ROW
+BEGIN
+    INSERT INTO sec.audit_log (
+        table_name,
+        operation_type,
+        row_id,
+        old_data,
+        new_data,
+        changed_by,
+        changed_at
+    ) VALUES (
+        'user',
+        'UPDATE',
+        OLD.id,
+        JSON_OBJECT('phone_number', OLD.phone_number, 'email', OLD.email, ...),
+        JSON_OBJECT('phone_number', NEW.phone_number, 'email', NEW.email, ...),
+        USER(),
+        NOW()
+    );
+END$$
+
+DELIMITER ;
+```
+
+### Audit Log Table Structure
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `id` | BIGINT AUTO_INCREMENT | Unique audit record ID |
+| `table_name` | VARCHAR | Which table was modified |
+| `operation_type` | ENUM | `INSERT` / `UPDATE` / `DELETE` |
+| `row_id` | BIGINT | Primary key of the affected row |
+| `old_data` | JSON | Full field values **before** the change |
+| `new_data` | JSON | Full field values **after** the change |
+| `changed_by` | VARCHAR | DB user or application user who made the change |
+| `changed_at` | TIMESTAMP | Exact timestamp of the change |
+
+### Triggered Tables
+
+```
+user          → All user account changes (password, phone, email)
+lead          → Lead status transitions, priority changes
+lead_contact  → Contact add/update/remove
+lead_activity → Activity completion, follow-up updates
+cart          → Cart modifications
+billing       → Payment status changes
+```
+
+### Real Audit Trail Example
+
+```
+Record 1:
+  table: user | op: UPDATE | row: 6
+  old_data: { "phone_number": "8095075541" }
+  new_data: { "phone_number": "8095075540" }
+  changed_by: root@localhost
+
+Record 2:
+  table: user | op: UPDATE | row: 6
+  old_data: { "phone_number": "8095075540" }
+  new_data: { "phone_number": "8095075541" }
+  changed_by: root@localhost
+```
+
+> Complete field-level change history. Before/after values as JSON. No application code required.
+
+### Screenshots
+
+#### Audit Log Record — UPDATE with Before/After Values
+> ![Audit Log 1](Audit%201.JPG)
+> *Full audit record: table=user, operation=UPDATE, old_data JSON, new_data JSON, changed_by*
+
+#### Sequential Audit History — Full Trail
+> ![Audit Log 2](Audit%202.JPG)
+> *Multiple audit records for the same row — complete change history visible*
+
+---
+
+## 🩺 Health Monitoring System
+
+> Automated multi-layer health checks with scheduled HTML email reports.
+
+### What Gets Monitored
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                 HEALTH CHECK LAYERS                     │
+├──────────────────────┬──────────────────────────────────┤
+│  INFRASTRUCTURE      │  MySQL · Kafka · Redis           │
+│                      │  Groq AI · Ollama                │
+├──────────────────────┼──────────────────────────────────┤
+│  BUSINESS MODULES    │  Leads API · Contacts API        │
+│                      │  Activities API                   │
+├──────────────────────┼──────────────────────────────────┤
+│  UI AVAILABILITY     │  /home · /login endpoints        │
+└──────────────────────┴──────────────────────────────────┘
+```
+
+### Scheduled Execution
+
+```java
+@Component
+public class HealthCheckScheduler {
+
+    // Runs at 10 AM, 1 PM, and 7 PM IST every day
+    @Scheduled(cron = "0 0 10,13,19 * * ?", zone = "Asia/Kolkata")
+    public void runScheduledHealthCheck() {
+        HealthReport report = healthCheckService.runAllChecks();
+        String htmlReport = reportGenerator.generateHtmlReport(report);
+        
+        // Email the HTML report
+        emailService.sendHtmlEmail(
+            "arjundargurathod@gmail.com",
+            "Clientrade Health Report — " + LocalDate.now(),
+            htmlReport
+        );
+        
+        // Save to DB
+        healthReportRepository.save(report);
+    }
+
+    // Nightly cleanup: delete reports older than 30 days
+    @Scheduled(cron = "0 0 2 * * ?")
+    public void cleanupOldReports() {
+        healthReportRepository.deleteOlderThan(
+            LocalDateTime.now().minusDays(30)
+        );
+    }
+}
+```
+
+### Manual REST Endpoints
+
+```
+GET  /api/health/run       → Trigger health check immediately
+GET  /api/health/latest    → Get most recent health report
+GET  /api/health/history   → List past reports
+```
+
+### Each Component Tracks
+
+- ✅ / ❌ Status (UP / DOWN)
+- ⏱️ Response time in milliseconds
+- 📝 Error message (if any)
+- 🕐 Timestamp of check
+
+### Screenshots
+
+#### Health Monitoring Dashboard — Infrastructure & Business Modules
+> ![Health Check 1](Healthcheck1.JPG)
+> *All layers monitored: MySQL, Kafka, Redis, Groq AI, Ollama, Leads, Contacts, Activities, UI endpoints*
+
+#### Automated HTML Email Report
+> ![Health Check Email](Healthcheck2.JPG)
+> *Color-coded HTML email report sent at 10 AM, 1 PM, 7 PM IST via JavaMailSender*
+
+---
+
+## 🎯 Lead CRM — Full Lifecycle
+
+### Lead Status Flow
+
+```
+OPEN → INPROCESS → PROPOSAL → CLOSURE
+   ↘                              ↗
+        INVALID (at any stage)
+```
+
+### Data Model
+
+```
+LeadMain
+├── source         (Store Visit / Enquiry / Campaign / Other)
+├── category       (Industry type)
+├── priority       (LOW / MEDIUM / HIGH / CRITICAL)
+├── isImportant    (boolean flag)
+├── status         (OPEN → INPROCESS → PROPOSAL → CLOSURE)
+│
+├── LeadContact[]
+│   ├── name, designation
+│   ├── phone, email
+│   └── socialMediaLinks
+│
+└── LeadActivity[]
+    ├── type         (CALL / EMAIL / MEETING)
+    ├── status       (OPEN / COMPLETE / CANCEL)
+    ├── followUpDate
+    └── assignedTo   (Merchant Staff)
+```
+
+### Screenshots
+
+#### Lead Main Table
+> ![Lead Main](https://github.com/arjunrathod1996/Clientrade/assets/110610821/92652ce2-815a-435a-a5e6-9d4c1991c628)
+> *Lead list with source, category, priority, importance flag — all role-scoped*
+
+#### Lead Contact
+> ![Lead Contact](https://github.com/arjunrathod1996/Clientrade/assets/110610821/4d00cccd-ffae-4c16-8354-097e80e12b59)
+> *Multiple contacts per lead with designation, phone, email, social links*
+
+#### Lead Activity
+> ![Lead Activity](https://github.com/arjunrathod1996/Clientrade/assets/110610821/dece12c7-e327-4f66-8e29-968bf8650ad2)
+> *Call/Email/Meeting activities with follow-up scheduling and staff assignment*
+
+#### Assign Lead from Merchant Admin
+> ![Assign Lead](https://github.com/arjunrathod1996/Clientrade/assets/110610821/e33493d6-c04c-414d-9357-a53f5a8297e9)
+> *Admin assigns lead activities to merchant staff members*
+
+---
+
+## 🛒 Cart, Billing & Invoice System
+
+### Billing Lifecycle
+
+```
+CART (PENDING)
+      ↓
+  Item confirmed
+      ↓
+  COMPLETED ←→ Item cancelled mid-order → quantity recalculated
+      ↓
+  CANCELLED (if fully cancelled)
+```
+
+### Key Features
+
+```java
+// Quantity delta recalculation on item cancel
+public void cancelCartItem(Long cartItemId) {
+    CartItem item = cartItemRepo.findById(cartItemId);
+    Cart cart = item.getCart();
+    
+    // Recalculate total
+    cart.setTotalItems(cart.getTotalItems() - item.getQuantity());
+    cart.setGrandTotal(cart.getGrandTotal() - (item.getPrice() * item.getQuantity()));
+    
+    item.setStatus(ItemStatus.CANCELLED);
+    cartItemRepo.save(item);
+    cartRepo.save(cart);
+}
+```
+
+### PDF Invoice — Zero Disk I/O
+
+```java
+// Thymeleaf template → ITextRenderer → Streamed directly to browser
+@GetMapping("/invoice/{billId}/download")
+public void downloadInvoice(@PathVariable Long billId, HttpServletResponse response) {
+    
+    BillingDTO billing = billingService.findById(billId);
+    
+    // Render Thymeleaf template to HTML string
+    String html = templateEngine.process("invoice-template", context);
+    
+    // Convert HTML → PDF in memory (no temp files)
+    response.setContentType("application/pdf");
+    response.setHeader("Content-Disposition", "attachment; filename=invoice_" + billId + ".pdf");
+    
+    ITextRenderer renderer = new ITextRenderer();
+    renderer.setDocumentFromString(html);
+    renderer.layout();
+    renderer.createPDF(response.getOutputStream());  // Stream directly
+}
+```
+
+### Screenshots
+
+> ![Cart](https://github.com/arjunrathod1996/Clientrade/assets/110610821/835f0f7c-b071-46dd-94d1-b1c23f824f02)
+> *Cart with items, quantities, add/remove controls*
+
+> ![Invoice](https://github.com/arjunrathod1996/Clientrade/assets/110610821/38b5b9f0-3a28-4d45-9915-8e4a96a81f4d)
+> *Live invoice with cancelled items recalculated — grand total updates dynamically*
+
+> ![Purchase History](https://github.com/arjunrathod1996/Clientrade/assets/110610821/32512c7b-9e0d-499d-9468-d47b9b63b017)
+> *Complete purchase history per customer*
+
+---
+
+## 📊 Insights Dashboard
+
+### What the Dashboard Shows
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│                    INSIGHTS DASHBOARD                        │
+├──────────────────┬───────────────────────────────────────────┤
+│  6-MONTH         │  Bar graph: completed counts + amounts    │
+│  TREND           │  per month (AJAX-powered, date-filterable)│
+├──────────────────┼───────────────────────────────────────────┤
+│  STATUS          │  COMPLETED: count + total amount          │
+│  BREAKDOWN       │  PENDING:   count + total amount          │
+│                  │  CANCELLED: count + total amount          │
+├──────────────────┼───────────────────────────────────────────┤
+│  TOP CUSTOMERS   │  By purchase count (most frequent buyer)  │
+│                  │  By total spend (highest value customer)  │
+├──────────────────┼───────────────────────────────────────────┤
+│  DRILL-DOWN      │  Click any status count →                 │
+│                  │  Redirects to filtered bill summary page  │
+└──────────────────┴───────────────────────────────────────────┘
+```
+
+### Screenshots
+
+> ![Insight 1](https://github.com/arjunrathod1996/Clientrade/assets/110610821/3ced7863-2939-44d6-9e8b-547e930117e4)
+> *6-month bar graph with completed counts and amounts*
+
+> ![Insight 2](https://github.com/arjunrathod1996/Clientrade/assets/110610821/c8a436e6-34b5-4aee-999a-c53b0879cea1)
+> *Status breakdowns + Top customers by purchase count and spend*
+
+> ![Insight 3 — Drill Down](https://github.com/arjunrathod1996/Clientrade/assets/110610821/847d6829-932b-482e-baf7-27592a61d426)
+> *Click status count → filtered bill summary page*
+
+### Excel Export — Apache POI
+
+```java
+// Full dataset OR filtered export — styled headers, zero disk I/O
+@GetMapping("/export/excel")
+public void exportToExcel(@RequestParam boolean exportAll,
+                           HttpServletResponse response) throws IOException {
+
+    List<BillingDTO> data = exportAll 
+        ? billingService.findAll()
+        : billingService.findFiltered(filterCriteria);
+
+    XSSFWorkbook workbook = new XSSFWorkbook();
+    XSSFSheet sheet = workbook.createSheet("Billing Data");
+
+    // Bold header row
+    CellStyle headerStyle = workbook.createCellStyle();
+    Font font = workbook.createFont();
+    font.setBold(true);
+    headerStyle.setFont(font);
+
+    Row header = sheet.createRow(0);
+    String[] columns = {"Customer", "Date", "Items", "Amount", "Status"};
+    for (int i = 0; i < columns.length; i++) {
+        Cell cell = header.createCell(i);
+        cell.setCellValue(columns[i]);
+        cell.setCellStyle(headerStyle);
+    }
+
+    // Data rows...
+
+    response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+    response.setHeader("Content-Disposition", "attachment; filename=billing_export.xlsx");
+    workbook.write(response.getOutputStream());
+    workbook.close();
+}
+```
+
+---
+
+## 🎰 Lucky Draw / Raffle System
+
+### How Tickets Work
+
+```
+Ticket Format: PREFIX-DATE-SEQUENCE
+Example:       CLNT-20250615-001
+               CLNT-20250615-002
+               CLNT-20250615-003
+```
+
+### System Components
+
+| Component | Description |
+|-----------|-------------|
+| **Raffle Pot** | Container for a draw event (name, date, status) |
+| **Ticket** | Auto-generated on customer purchase / entry |
+| **Prize Config** | Position (1st, 2nd, 3rd), count, gift description |
+| **Draw Engine** | Randomised selection from eligible tickets |
+| **Spin UI** | Real-time animated spin wheel — reveals winner live |
+
+### Screenshots
+
+> *(Add screenshot: Raffle management page)*
+
+> *(Add screenshot: Real-time spin UI with winner reveal)*
+
+---
+
+## ❓ FAQ System
+
+### Features
+
+```
+✅ Topics + Q&A structure (topic → multiple questions → answers)
+✅ Answer formats: Plain text, Image, Embedded video
+✅ Topic reordering (drag and drop — admin controlled)
+✅ Auto-expand: Most popular topic opens by default on page load
+✅ Search: Across topic names and question text
+✅ Responsive collapsible UI (works on all screen sizes)
+```
+
+### Data Structure
+
+```
+FAQTopic
+├── title
+├── orderIndex    (admin can reorder)
+├── isDefault     (auto-expand on load)
+│
+└── FAQQuestion[]
+    ├── questionText
+    ├── answerType   (TEXT / IMAGE / VIDEO)
+    └── answerContent
+```
+
+### Screenshots
+
+> ![FAQ Admin](https://github.com/arjunrathod1996/Clientrade/assets/110610821/8dbd0fff-16a1-4e5e-8425-2eb479001d91)
+> *Admin creates FAQ topics and questions with multimedia answers*
+
+> ![FAQ Membership App](https://github.com/arjunrathod1996/Clientrade/assets/110610821/651620aa-cee2-47b7-b127-16a85b609bb2)
+> *Customer-facing FAQ: most popular topic auto-expanded, search enabled, all formats supported*
+
+---
+
+## 📱 PWA & Browser API Features
+
+### Web OTP API — Auto-Read OTP from SMS
+
+```javascript
+// Automatically reads OTP sent via SMS — no manual typing
+if ('OTPCredential' in window) {
+    const ac = new AbortController();
+    
+    navigator.credentials.get({
+        otp: { transport: ['sms'] },
+        signal: ac.signal
+    }).then(otp => {
+        document.getElementById('otpInput').value = otp.code;
+        // Auto-submit after 1.5s
+        setTimeout(() => submitOtpForm(), 1500);
+        ac.abort();
+    });
+}
+```
+
+### Contact Picker API — Referral Feature
+
+```javascript
+// Select up to 10 contacts for referral
+async function pickContacts() {
+    const contacts = await navigator.contacts.select(
+        ['name', 'tel'],
+        { multiple: true }
+    );
+    
+    // Filter: max 10, no duplicates, no invalid numbers
+    const validContacts = contacts
+        .filter(c => isValidIndianMobile(c.tel[0]))
+        .filter(c => !existingCustomers.includes(c.tel[0]))
+        .slice(0, 10);
+    
+    displayAsTags(validContacts);
+}
+```
+
+### Geo Code API — Merchant Store Discovery
+
+```javascript
+// Find merchant stores near the customer's location
+navigator.geolocation.getCurrentPosition(async position => {
+    const { latitude, longitude } = position.coords;
+    
+    const stores = await fetchNearbyStores(latitude, longitude);
+    renderStoreCards(stores);
+});
+```
+
+> **Note:** Customer profile must be ≥ 50% complete before store discovery is enabled.
+
+### Screenshots
+
+> ![Customer Login OTP](https://github.com/arjunrathod1996/Clientrade/assets/110610821/a4924e4f-3246-4dd1-9258-6aeeb8bcc2f5)
+> *OTP login with Web OTP API auto-read from SMS*
+
+> ![Customer Profile](https://github.com/arjunrathod1996/Clientrade/assets/110610821/8255c5d1-f47b-4b4a-8611-3664891f0321)
+> *Customer profile with Geo Code API for store discovery*
+
+> ![Refer Contacts](https://github.com/arjunrathod1996/Clientrade/assets/110610821/ff96e323-3a2d-41ae-b338-c00ed8794db8)
+> *Contact Picker API — select up to 10 contacts for referral*
+
+> ![Merchant Stores](https://github.com/arjunrathod1996/Clientrade/assets/110610821/aa244df9-baa4-406a-bb41-b267a88daf5c)
+> *Merchant stores discovered via Geo Code API with category and location filtering*
+
+---
+
+## 🌐 Language Translation
+
+### Supported Languages
+
+| Language | Code | Status |
+|----------|------|--------|
+| English  | `en` | ✅ Default |
+| Hindi    | `hi` | ✅ Active |
+| Kannada  | `kn` | ✅ Active |
+| Spanish  | `es` | ✅ Active |
+
+### Implementation — No Page Reload
+
+```java
+// Spring LocaleResolver — reads locale from cookie
+@Bean
+public LocaleResolver localeResolver() {
+    CookieLocaleResolver resolver = new CookieLocaleResolver();
+    resolver.setDefaultLocale(Locale.ENGLISH);
+    return resolver;
+}
+
+// Locale change interceptor
+@Bean
+public LocaleChangeInterceptor localeChangeInterceptor() {
+    LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();
+    interceptor.setParamName("lang");
+    return interceptor;
+}
+```
+
+```javascript
+// AJAX language switch — no page reload
+function changeLanguage(lang) {
+    fetch('/change-lang?lang=' + lang, { method: 'POST' })
+        .then(() => location.reload());
+}
+```
+
+### Screenshot
+
+> ![Language Translation](https://github.com/arjunrathod1996/Clientrade/assets/110610821/91d18bc1-42ee-46b4-8085-8400e6d71f6b)
+> *Dynamic language switching: English → Kannada / Hindi — no page reload*
+
+---
+
+## 🔧 Feature Toggle System
+
+> Admin controls which features are active in the Membership App — no code changes needed.
+
+### Toggleable Features
+
+| Feature | Description |
+|---------|-------------|
+| **Appointment** | Customer can book appointments with staff |
+| **Submit Bill** | Customer can submit/upload bills |
+
+### How It Works
+
+```java
+// Feature config stored in DB
+@Entity
+public class FeatureConfig {
+    private String featureName;      // "APPOINTMENT", "SUBMIT_BILL"
+    private boolean enabled;
+    private Long merchantAdminId;    // Scoped per business
+}
+
+// Checked in Thymeleaf template
+// th:if="${featureConfig.isEnabled('APPOINTMENT')}"
+```
+
+### Screenshots
+
+> ![Feature Enable](https://github.com/arjunrathod1996/Clientrade/assets/110610821/48b4cade-8676-4f70-b5f8-0c810816dedc)
+> *Admin enables features for the Membership App*
+
+> ![Feature Disable](https://github.com/arjunrathod1996/Clientrade/assets/110610821/5ed47a4e-cb43-4687-91e1-fda551a9acd3)
+> *Disabled feature immediately disappears from Membership App — no deployment needed*
+
+---
+
+## 📁 Project Structure
+
+```
+clientrade/
+│
+├── src/main/java/com/clientrade/
+│   ├── config/
+│   │   ├── SecurityConfig.java          ← Spring Security + OAuth2 + JWT
+│   │   ├── JWTAuthFilter.java           ← OncePerRequestFilter JWT validation
+│   │   └── OAuthenticationSuccessHandler.java
+│   │
+│   ├── controller/
+│   │   ├── AuthController.java          ← OTP generate/verify, JWT cookie
+│   │   ├── LeadController.java
+│   │   ├── BillingController.java
+│   │   ├── AiChatController.java        ← Claude API integration
+│   │   └── HealthCheckController.java
+│   │
+│   ├── service/
+│   │   ├── JWTService.java
+│   │   ├── OtpService.java              ← Rate limiting logic
+│   │   ├── ClaudeAiService.java         ← AI chatbot with domain scoping
+│   │   ├── HealthCheckService.java
+│   │   ├── PdfExportService.java        ← ITextRenderer streaming
+│   │   └── ExcelExportService.java      ← Apache POI XSSFWorkbook
+│   │
+│   ├── model/
+│   │   ├── User.java
+│   │   ├── LeadMain.java
+│   │   ├── LeadContact.java
+│   │   ├── LeadActivity.java
+│   │   ├── Cart.java / CartItem.java
+│   │   ├── Billing.java
+│   │   ├── AuditLog.java
+│   │   └── HealthReport.java
+│   │
+│   └── scheduler/
+│       └── HealthCheckScheduler.java    ← @Scheduled cron + email reports
+│
+├── src/main/resources/
+│   ├── templates/                       ← Thymeleaf HTML templates
+│   │   ├── invoice-template.html
+│   │   ├── health-report-email.html
+│   │   └── ...
+│   ├── messages.properties              ← EN translations
+│   ├── messages_hi.properties           ← Hindi translations
+│   ├── messages_kn.properties           ← Kannada translations
+│   ├── messages_es.properties           ← Spanish translations
+│   └── application.properties
+│
+├── src/main/resources/db/
+│   ├── migration/                       ← Liquibase changesets
+│   └── triggers/
+│       ├── audit_user_trigger.sql
+│       ├── audit_lead_trigger.sql
+│       └── ...
+│
+└── pom.xml
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+```
+Java 17+
+MySQL 8.0+
+Maven 3.8+
+Claude API Key (Anthropic) — for AI chatbot
+Gmail App Password — for health report emails
+```
+
+### Configuration
+
+```yaml
+# application.properties
+
+# Database
+spring.datasource.url=jdbc:mysql://localhost:3306/clientrade
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+
+# JWT
+jwt.secret=your-jwt-secret-key
+jwt.expiration=86400000
+
+# Claude API (AI Chatbot)
+claude.api.key=your-claude-api-key
+claude.model=claude-sonnet-4-6
+claude.max.tokens=1000
+
+# OAuth2 - Google
+spring.security.oauth2.client.registration.google.client-id=your-google-client-id
+spring.security.oauth2.client.registration.google.client-secret=your-secret
+
+# OAuth2 - GitHub
+spring.security.oauth2.client.registration.github.client-id=your-github-client-id
+spring.security.oauth2.client.registration.github.client-secret=your-secret
+
+# Health Check Email
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=your-email@gmail.com
+spring.mail.password=your-app-password
+health.report.recipient=arjundargurathod@gmail.com
+```
+
+### Run
+
+```bash
+git clone https://github.com/arjunrathod1996/Clientrade.git
+cd Clientrade
+
+# Configure application.properties (see above)
+
+mvn clean install
+mvn spring-boot:run
+
+# Application starts at: http://localhost:8080
+```
+
+### DB Trigger Setup
+
+```bash
+# After schema is created by Hibernate/Liquibase, run triggers:
+mysql -u root -p clientrade < src/main/resources/db/triggers/audit_triggers.sql
+```
+
+---
+
+<div align="center">
+
+## 👨‍💻 Built By
+
+**Arjun Rathod** — Full Stack Java Developer · Bengaluru, India
+
+[![GitHub](https://img.shields.io/badge/GitHub-arjunrathod1996-181717?style=for-the-badge&logo=github)](https://github.com/arjunrathod1996)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-arjundr-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/arjundr/)
+[![Email](https://img.shields.io/badge/Email-arjundargurathod@gmail.com-EA4335?style=for-the-badge&logo=gmail)](mailto:arjundargurathod@gmail.com)
+
+---
+
+*3 years · 2 companies · Java + Spring Boot + React + AI*
+
+*Societe Generale (financial compliance & IAM) · Slingloft Technologies (enterprise CRM)*
+
+</div>
